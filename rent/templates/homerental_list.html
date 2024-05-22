@@ -1,0 +1,14 @@
+<h1>homes for rent</h1>
+
+<ul>
+    {% for rental in HomeRental %}
+        <li>
+        <strong>Tile:</strong> {{ rental.title }} <br>
+        <strong>Address:</strong> {{ rental.address }} <br>
+        <strong>Description:</strong> {{ rental.description }} <br>
+        <strong>Price:</strong> {{ rental.price }} <br>
+        <strong>available:</strong> {% if rental.available %} Yes {% else %} No {% endif %}
+        </li>
+    {% endfor%}
+
+</ul>
